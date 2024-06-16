@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Side Navigation Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            border: 1px solid black; /* Thin black border around the whole page */
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidenav a {
+            padding: 35px 10px;
+            margin: 3px 0; /* Further reduced vertical margin */
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            border-radius: 0 20px 20px 0;
+            width: 100%;
+            transition: 0.3s;
+            font-size: 0; /* Hide text content */
+            position: relative; /* Position relative for pseudo-element */
+        }
+
+        .sidenav a::after {
+            content: ''; /* Ensure content is empty */
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure it's behind the button */
+            transition: transform 0.3s ease-out, width 0.3s ease-out; /* Transition for transform and width */
+            border-radius: 0 20px 20px 0;
+            background-color: rgba(0, 0, 0, 1); /* Full opaque background color */
+        }
+
+        .sidenav a:hover::after {
+            transform: scale(1.1); /* Bulge effect */
+            width: calc(100% + 10px); /* Increase width on hover */
+        }
+
+        .sidenav a.green { background-color: green; }
+        .sidenav a.green:hover::after { background-color: rgba(0, 128, 0, 1); } /* Adjusted background color */
+        
+        .sidenav a.blue { background-color: blue; }
+        .sidenav a.blue:hover::after { background-color: rgba(0, 0, 255, 1); } /* Adjusted background color */
+
+        .sidenav a.red { background-color: red; }
+        .sidenav a.red:hover::after { background-color: rgba(255, 0, 0, 1); } /* Adjusted background color */
+
+        .sidenav a.darkgrey { background-color: darkgrey; }
+        .sidenav a.darkgrey:hover::after { background-color: rgba(64, 64, 64, 1); } /* Adjusted background color */
+
+        .sidenav a:hover {
+            opacity: 0.7;
+        }
+
+        .main-content {
+            margin-left: 90px; /* Adjusted margin-left to reduce space */
+            padding: 20px;
+        }
+
+        h3, p {
+            margin: 0; /* Removed bottom margin to reduce space */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="https://www.google.com" class="green" target="_blank"></a>
+        <a href="https://www.facebook.com" class="blue" target="_blank"></a>
+        <a href="https://www.twitter.com" class="red" target="_blank"></a>
+        <a href="https://www.linkedin.com" class="darkgrey" target="_blank"></a>
+    </div>
+
+    <div class="main-content">
+        <h3>Hoverable Sidenav Buttons</h3>
+        <br> <!-- Line break added -->
+        <p>Hover over the buttons in the left side navigation to open them.</p>
+    </div>
+</body>
+</html>

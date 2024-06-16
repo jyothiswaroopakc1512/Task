@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table with Rounded Corners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 0; /* Remove default margin */
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%; /* Full width */
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            border-collapse: separate;
+            border: 1px solid black;
+            border-radius: 20px;
+            overflow: hidden;
+            border-spacing: 5px;
+            width: 100%; /* Full width */
+            max-width: 2000px; /* Maximum width */
+            background-color: #96D4D3;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+            background-color: #96D4D3;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+
+        th {
+            width: 200px;
+        }
+
+        td {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+

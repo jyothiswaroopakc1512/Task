@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Page Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            border: 1px solid black; /* Thin black border around the whole page */
+            background-color: yellow; /* Yellow background inside the border */
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 150px;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            background-color: yellow; /* Yellow background for sidebar */
+        }
+
+        .sidebar h1 {
+            color: purple;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .sidebar h4 {
+            color: purple;
+            margin: 0 0 10px;
+        }
+
+        .sidebar p {
+            color: purple;
+            margin: 0;
+            text-align: center;
+        }
+
+        .menu-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: left;
+            text-decoration: none;
+            color: blue; /* Initial blue color for text */
+            background-color: white;
+            border: none;
+            transition: color 0.3s ease-in-out;
+            position: relative; /* Position relative for pseudo-element */
+            margin-bottom: 10px; /* Space between buttons */
+        }
+
+        .menu-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 38px;
+            background-color: black;
+        }
+
+        .menu-button:hover {
+            color: purple; /* Color changes to purple on hover */
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px 40px; /* Increased padding for more space */
+        }
+
+        .content h1, .content h4, .content p {
+            color: purple; /* Purple color for content text */
+        }
+
+        .line {
+            border-bottom: 2px dotted purple; /* Dotted line with purple color and thicker dots */
+            margin: 20px 0;
+        }
+
+        .italic-text {
+            font-style: italic; /* Italic text */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#home" class="menu-button">Home page</a><br>
+        <a href="https://www.example.com/musings" class="menu-button" target="_blank">Musings</a><br>
+        <a href="https://www.example.com/mytown" class="menu-button" target="_blank">My town</a><br>
+        <a href="https://www.example.com/links" class="menu-button" target="_blank">Links</a><br>
+    </div>
+
+    <div class="content">
+        <h1>My first styled page</h1>
+        <h4>Welcome to my styled page!</h4>
+        <h4>It lacks images, but at least it has style. And it has links, even if they don't go anywhere...</h4>
+        <h4>There should be more here, but I don't know what yet.</h4>
+        <div class="line"></div>
+        <p class="italic-text">Made 5 April 2004<br>by myself</p>
+    </div>
+</body>
+</html>

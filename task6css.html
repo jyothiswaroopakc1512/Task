@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-container img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .login-container h2 {
+            margin: 20px 0;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+        }
+
+        .login-container .cancel-button {
+            width: calc(50% - 40px); /* Reduced width */
+            padding: 5px; /* Adjusted padding */
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            font-size: 14px; /* Adjusted font size */
+        }
+
+        .login-container .remember-me {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Added margin */
+        }
+
+        .login-container .remember-me input {
+            margin-right: 5px;
+        }
+
+        .login-container .forgot-password {
+            text-align: right;
+            margin-top: 10px;
+            position: relative; /* Added relative positioning */
+        }
+
+        .login-container .forgot-password a {
+            color: #333;
+            text-decoration: underline; /* Underline style */
+            display: inline-block; /* Ensures the underline is only under the text */
+            margin-top: 5px; /* Adjust vertical positioning */
+        }
+
+        /* Style for the light grey background */
+        .login-container .additional-options {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="image.jpg" alt="User Icon">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Enter Username" required><br>
+            <input type="password" placeholder="Enter Password" required><br>
+            <button type="submit">Login</button><br>
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+            <div class="additional-options">
+                <button type="button" class="cancel-button">Cancel</button>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combined Vertical and Horizontal Navigation Bars</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light background color for the body */
+            display: flex; /* Use flexbox for layout */
+            justify-content: flex-start; /* Align items to the start of the main axis */
+            align-items: flex-start; /* Align items to the start of the cross axis */
+        }
+
+        .vertical-navbar {
+            width: 200px; /* Width of the vertical navbar */
+            background-color: lightblue;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 20px; /* Margin around the navbar */
+            padding: 10px;
+        }
+
+        .vertical-navbar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .vertical-navbar li {
+            margin-bottom: 10px;
+        }
+
+        .vertical-navbar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: blue; /* Default text color */
+        }
+
+        .vertical-navbar a:hover,
+        .vertical-navbar a:focus {
+            background-color: yellow; /* Background color on hover/focus */
+            color: black; /* Text color on hover/focus */
+        }
+
+        .horizontal-navbar {
+            width: calc(100% - 260px); /* Adjust width to fit remaining space */
+            background-color: lightgrey;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 20px; /* Margin around the navbar */
+            padding: 10px;
+        }
+
+        .horizontal-navbar ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Display as flexbox for horizontal layout */
+        }
+
+        .horizontal-navbar li {
+            margin-right: 10px; /* Space between horizontal items */
+        }
+
+        .horizontal-navbar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: blue; /* Default text color */
+        }
+
+        .horizontal-navbar a:hover,
+        .horizontal-navbar a:focus {
+            background-color: darkgrey; /* Background color on hover/focus */
+            color: white; /* Text color on hover/focus */
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical-navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#bootstrap">Bootstrap</a></li>
+        </ul>
+    </div>
+
+    <div class="horizontal-navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#bootstrap">Bootstrap</a></li>
+        </ul>
+    </div>
+</body>
+</html>

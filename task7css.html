@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    body {
+        background-color: #ac4078; /* Darkened background color */
+        color: #fff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    form {
+        background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+        padding: 30px; /* Increased padding for more space */
+        border-radius: 0; /* Rectangular corners */
+        width: 1000px;
+        max-width: 100%;
+    }
+    
+    label {
+        font-weight: bold;
+        display: inline-block;
+        width: 150px; /* Increased width of labels */
+        margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    textarea,
+    select {
+        width: calc(100% - 260px); /* Adjusted width to leave space for labels */
+        padding: 10px;
+        margin-bottom: 20px; /* Increased margin bottom for more space */
+        border: none;
+        border-radius: 0; /* Rectangular corners */
+        box-sizing: border-box;
+        font-size: 16px;
+        outline: none;
+    }
+    
+    textarea {
+        height: 120px; /* Increased height for textarea */
+    }
+    
+    textarea::placeholder {
+        color: #ccc; /* Placeholder text color */
+    }
+    
+    .gender-group {
+        margin-bottom: 20px; /* Increased margin bottom for more space */
+    }
+    
+    .gender-group label {
+        margin-right: 15px;
+    }
+    
+    button {
+        background-color: #fff; /* White background for button */
+        color: #000; /* Text color for button */
+        padding: 12px 20px; /* Increased padding for button */
+        border: 2px solid #000; /* Black border for button */
+        border-radius: 0; /* Rectangular corners */
+        cursor: pointer;
+        width: 90%;
+        font-size: 16px;
+        margin-top: 20px; /* Added margin top for space above the button */
+    }
+    
+    select {
+        width: calc(100% - 260px); /* Adjusted width to leave space for labels */
+        padding: 10px;
+        margin-bottom: 20px; /* Increased margin bottom for more space */
+        border: none;
+        border-radius: 0; /* Rectangular corners */
+        box-sizing: border-box;
+        font-size: 16px;
+        outline: none;
+    }
+</style>
+<script>
+    function handleAboutFocus() {
+        var textarea = document.getElementById('about');
+        textarea.placeholder = '';
+        textarea.previousElementSibling.innerHTML = 'About Yourself:';
+    }
+    function handleAboutBlur() {
+        var textarea = document.getElementById('about');
+        if (textarea.value === '') {
+            textarea.placeholder = 'Write about yourself...';
+            textarea.previousElementSibling.innerHTML = '';
+        }
+    }
+</script>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <div class="gender-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+        
+        <label for="language">Language:</label>
+        <select id="language" name="language">
+            <option value="" selected disabled>Select Language</option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+        </select>
+    
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" name="zip">
+        
+        <label for="about" style="margin-top: 10px;">About:</label><br>
+        <textarea id="about" name="about" onfocus="handleAboutFocus()" onblur="handleAboutBlur()" placeholder="Write about yourself..."></textarea>
+        
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
